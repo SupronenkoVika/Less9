@@ -1,11 +1,12 @@
 ﻿namespace Less9
 {
-    class Collection<T>
+    public class Collection<T>
     {
-        T[] array;
-        public Collection()
+        T[] array = Array.Empty<T>();
+        public T this[int index]
         {
-            array = new T[0];
+            get { return array[index]; }
+            set { array[index] = value; }
         }
 
         public void Add(T item)
@@ -48,7 +49,7 @@
             return array[index];
         }
 
-        public int Count()
+        public int ArrLength()
         {
             return array.Length;
         }
